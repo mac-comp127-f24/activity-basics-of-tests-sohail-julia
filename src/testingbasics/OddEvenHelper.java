@@ -1,5 +1,5 @@
 package testingbasics;
-
+import java.lang.Math;
 import java.util.Scanner;
 
 /**
@@ -10,14 +10,16 @@ public class OddEvenHelper {
      * Returns true if and only if the given number is even.
      */
     public static boolean isEven(int n) {
-        return n % 2 == 0;
+        return Math.abs(n) % 2 == 0;
+        
     }
+   
 
     /**
      * Returns true if and only if the given number is odd.
      */
     public static boolean isOdd(int n) {
-        return n % 2 == 1;
+        return Math.abs(n) % 2 == 1;
     }
 
     public static void main(String[] args) {
@@ -26,7 +28,14 @@ public class OddEvenHelper {
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
         System.out.println("It is " + isEven(number) + " that " + number + " is even.");
-        System.out.println("It is " + isOdd(number) + " that " + number + " is odd.");
+        System.out.println("It is " + isOdd(number) + " that " + number + " is odd." );
+
+    
+
+        if (isOdd(number)) {
+            System.out.println("Wow.That's odd!");
+
+        }
 
         scanner.close();
     }

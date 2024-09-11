@@ -20,10 +20,12 @@ public class Roshambo {
      */
     public static int compareShapes(String shape1, String shape2) {
         if (shape2.equals(shape1)) {
+
             return 0;
         }
         if (
             shape2.equals(SCISSORS) && shape1.equals(PAPER)
+            ||shape2.equals(ROCK) && shape1.equals(SCISSORS)
             || shape2.equals(PAPER) && shape1.equals(ROCK)
         ) {
             return 1;
