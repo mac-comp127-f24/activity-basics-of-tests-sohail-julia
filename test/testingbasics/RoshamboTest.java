@@ -16,6 +16,7 @@ public class RoshamboTest {
 
     @Test
     void compareShapesWherePlayer2Wins() {
+        assertEquals(1, Roshambo.compareShapes(Roshambo.SCISSORS, Roshambo.ROCK));
         assertEquals(1, Roshambo.compareShapes(Roshambo.ROCK, Roshambo.PAPER));
         assertEquals(1, Roshambo.compareShapes(Roshambo.PAPER, Roshambo.SCISSORS));
     }
